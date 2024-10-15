@@ -68,10 +68,10 @@ vector<T> generate_random_vector(std::size_t num, T min = -10, T max = 10)
 }
 
 
+
+
 /*
 это я выписал, чтобы просто показать как работает erase
-
-
 template <typename T>
 class vector {
 public:
@@ -109,6 +109,10 @@ private:
 */
 
 
+
+
+
+
 int main(){
 	setlocale(LC_ALL, "Russian");
 	vector<int> v = generate_random_vector<int>(20, 1, 50);
@@ -116,17 +120,24 @@ int main(){
 	vector<int> v2 = generate_random_vector<int>(19, 1, 50);
 	string str,str1,str2,str3;
 	int N;
+	int count11 = 0, count21 = 0, count31 = 0;
+	int a;
+	int summ = 0;
+	int k2, k1;
+	int count = 0;
+	int i = 0;
+	string test;
+	char m, n;
 
 	while (true) {
 		cout << "Введите число N" << endl;
 		cin >> N; //выбор для свича
 		cout << "Чтобы выйти, введите 0" << endl;
 		
-
 		switch (N) {
 
 		case 1:
-			int a;
+			
 			cout << "Введите число а." << endl;
 			cin >> a;
 
@@ -152,8 +163,7 @@ int main(){
 			cout << endl;
 
 		case 2:
-			int summ = 0;
-			int k2, k1;
+			
 			cout << "Сумма массив" << endl;
 			for (int i = 0; i < v.size(); ++i) {
 				summ += v.at(i);
@@ -257,8 +267,6 @@ int main(){
 
 		case 5: 
 			cout << "Введите строку" << endl;
-				int count = 0;
-				int i = 0;
 				cin >> str;
 				while (str[i++] != '\0') {
 					++count;
@@ -270,7 +278,6 @@ int main(){
 
 		case 6:
 				cout << "Введите две фамилии" << endl;
-				string str1,str2;
 				int count1 = 0,count2 = 0;
 				i = 0;
 				cin >> str1>>str2;
@@ -287,7 +294,7 @@ int main(){
 
 		case 7:
 			cout << "Введите три слова" << endl;
-				int count11 = 0, count21 = 0, count31 = 0;
+				
 				i = 0;
 				cin >> str1 >> str2 >> str3;
 				while (str1[i++] != '\0') {
@@ -310,8 +317,6 @@ int main(){
 
 		case 8:
 
-				string test;
-				char m, n;
 				cout << "Введите строку" << endl;
 				char detection[100];
 				for (int i = 0; i < 100; i++) {
